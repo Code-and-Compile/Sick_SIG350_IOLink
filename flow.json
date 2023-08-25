@@ -1,1 +1,910 @@
-[]
+[
+    {
+        "id": "661a2f634915524d",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0816abbb5f70e09c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.0.104",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d24cc8e4c9aa7bee",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.100.1:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "3be00bc3daf81171",
+        "type": "ctrlx-config",
+        "name": "",
+        "hostname": "192.168.0.76",
+        "debug": false
+    },
+    {
+        "id": "d33f5be9621178a8",
+        "type": "ui_group",
+        "name": "SIG360 Conditionig Monitoring",
+        "tab": "4a71cdd2253f1353",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a71cdd2253f1353",
+        "type": "ui_tab",
+        "name": "Sick Sensor Intelligence",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f9b5359dc148bf49",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1632e9d22c2a0bc5",
+        "type": "aedes broker",
+        "z": "661a2f634915524d",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "28b4e1a3c54a7bf1",
+        "type": "mqtt in",
+        "z": "661a2f634915524d",
+        "name": "",
+        "topic": "sig350/iolink/v1/gateway/identification",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0816abbb5f70e09c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "b1e8bc5c9bf3392b"
+            ]
+        ]
+    },
+    {
+        "id": "b1e8bc5c9bf3392b",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5eaf9aa9732dae75",
+        "type": "OpcUa-Client",
+        "z": "661a2f634915524d",
+        "endpoint": "d24cc8e4c9aa7bee",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "e7714544fa99c1ce",
+                "f657bfddc60b9d18",
+                "6ef726a4f3e2bd5d",
+                "8e989199e53b9a28",
+                "234f054e7dfe8a36"
+            ]
+        ]
+    },
+    {
+        "id": "9dfa768f8f305b23",
+        "type": "OpcUa-Item",
+        "z": "661a2f634915524d",
+        "item": "ns=6;i=33308",
+        "datatype": "Int8 Array",
+        "value": "",
+        "name": "",
+        "x": 340,
+        "y": 840,
+        "wires": [
+            [
+                "5eaf9aa9732dae75"
+            ]
+        ]
+    },
+    {
+        "id": "8723944666c254f7",
+        "type": "inject",
+        "z": "661a2f634915524d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "9dfa768f8f305b23"
+            ]
+        ]
+    },
+    {
+        "id": "48a358d579755aa6",
+        "type": "inject",
+        "z": "661a2f634915524d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "42d1cd3ee138cb42"
+            ]
+        ]
+    },
+    {
+        "id": "8ef0463639857e87",
+        "type": "ctrlx-datalayer-request",
+        "z": "661a2f634915524d",
+        "device": "3be00bc3daf81171",
+        "method": "READ",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/_6076924/IO_Link_Port_S1/TxPDO.Input_byte_0",
+        "payloadFormat": "value",
+        "name": "",
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "a0917b498f51657e"
+            ]
+        ]
+    },
+    {
+        "id": "591d249d80b49646",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 900,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "42d1cd3ee138cb42",
+        "type": "http request",
+        "z": "661a2f634915524d",
+        "name": "Current Temp",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.1/iolink/v1/devices/master1port1/parameters/4352/subindices/1/value",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "fe0c1157eb5fa29c"
+            ]
+        ]
+    },
+    {
+        "id": "fe0c1157eb5fa29c",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.value[0]",
+        "targetType": "msg",
+        "statusVal": "payload.value[0]",
+        "statusType": "auto",
+        "x": 620,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e7714544fa99c1ce",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "Convert to REAL",
+        "func": "// Create a buffer\nvar buf = new ArrayBuffer(4);//0,1,2,3\n\n// Create a data view of it\nvar view = new DataView(buf);\n\n// Write the ints to it\nview.setInt8(0, msg.payload[0]);\nview.setInt8(1, msg.payload[1]);\nview.setInt8(2, msg.payload[2]);\nview.setInt8(3, msg.payload[3]);\n\n// Read the bits as a float; note that by doing this, we're implicitly\n// converting it from a 32-bit float into JavaScript's native 64-bit double\nvar num = view.getFloat32(0);\n// Done\nmsg.topic = \"Set-Point\";\nmsg.payload = Number(num.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 840,
+        "wires": [
+            [
+                "6012489d0ced1b15",
+                "c751ac6367aad934"
+            ]
+        ]
+    },
+    {
+        "id": "6012489d0ced1b15",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 980,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "f657bfddc60b9d18",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c37bd9b124db8c40",
+        "type": "comment",
+        "z": "661a2f634915524d",
+        "name": "Reading Temperature via OPC UA",
+        "info": "",
+        "x": 200,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2228ff325311edf1",
+        "type": "comment",
+        "z": "661a2f634915524d",
+        "name": "Byte to Real",
+        "info": "",
+        "x": 770,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "147ae2d40599d9c1",
+        "type": "comment",
+        "z": "661a2f634915524d",
+        "name": "Reading Temperature via API",
+        "info": "",
+        "x": 180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "747e9b608518a601",
+        "type": "inject",
+        "z": "661a2f634915524d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "8ef0463639857e87",
+                "f17a9c2e1eaf3f0e",
+                "7065175f3c7f7ec1",
+                "3be0cbb78824b6dd",
+                "8bdb998186537267"
+            ]
+        ]
+    },
+    {
+        "id": "f17a9c2e1eaf3f0e",
+        "type": "ctrlx-datalayer-request",
+        "z": "661a2f634915524d",
+        "device": "3be00bc3daf81171",
+        "method": "READ",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/_6076924/IO_Link_Port_S1/TxPDO.Input_byte_1",
+        "payloadFormat": "value",
+        "name": "",
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "2b85fe9bee81e2ab"
+            ]
+        ]
+    },
+    {
+        "id": "7065175f3c7f7ec1",
+        "type": "ctrlx-datalayer-request",
+        "z": "661a2f634915524d",
+        "device": "3be00bc3daf81171",
+        "method": "READ",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/_6076924/IO_Link_Port_S1/TxPDO.Input_byte_2",
+        "payloadFormat": "value",
+        "name": "",
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "6829c469e1900310"
+            ]
+        ]
+    },
+    {
+        "id": "3be0cbb78824b6dd",
+        "type": "ctrlx-datalayer-request",
+        "z": "661a2f634915524d",
+        "device": "3be00bc3daf81171",
+        "method": "READ",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/_6076924/IO_Link_Port_S1/TxPDO.Input_byte_3",
+        "payloadFormat": "value",
+        "name": "",
+        "x": 540,
+        "y": 620,
+        "wires": [
+            [
+                "9c4c3f847f2686b6"
+            ]
+        ]
+    },
+    {
+        "id": "210853b8eb197f02",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "Convert to REAL",
+        "func": "//Read stored bytes\nvar byte0 = flow.get('tbyte0')||0;\nvar byte1 = flow.get('tbyte1') || 0;\nvar byte2 = flow.get('tbyte2') || 0;\nvar byte3 = flow.get('tbyte3') || 0;\n\n// Create a buffer\nvar buf = new ArrayBuffer(4);//0,1,2,3\n\n// Create a data view of it\nvar view = new DataView(buf);\n\n// Write the ints to it\nview.setInt8(0, byte0);\nview.setInt8(1, byte1);\nview.setInt8(2, byte2);\nview.setInt8(3, byte3);\n\n// Read the bits as a float; note that by doing this, we're implicitly\n// converting it from a 32-bit float into JavaScript's native 64-bit double\nvar num = view.getFloat32(0);\n// Done\nmsg.topic = \"Temperature\";\nmsg.payload = Number(num.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 680,
+        "wires": [
+            [
+                "591d249d80b49646"
+            ]
+        ]
+    },
+    {
+        "id": "a0917b498f51657e",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "function 13",
+        "func": "flow.set('tbyte0',msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b85fe9bee81e2ab",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "function 14",
+        "func": "flow.set('tbyte1',msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6829c469e1900310",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "function 15",
+        "func": "flow.set('tbyte2',msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c4c3f847f2686b6",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "function 16",
+        "func": "flow.set('tbyte3',msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "086f3b15fcbe41ba",
+        "type": "comment",
+        "z": "661a2f634915524d",
+        "name": "Reading Temperature via the ctrlX",
+        "info": "",
+        "x": 200,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6ef726a4f3e2bd5d",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "VRMS Z Convert to REAL",
+        "func": "// Create a buffer\nvar buf = new ArrayBuffer(4);//0,1,2,3\n\n// Create a data view of it\nvar view = new DataView(buf);\n\n// Write the ints to it\nview.setInt8(0, msg.payload[4]);\nview.setInt8(1, msg.payload[5]);\nview.setInt8(2, msg.payload[6]);\nview.setInt8(3, msg.payload[7]);\n\n// Read the bits as a float; note that by doing this, we're implicitly\n// converting it from a 32-bit float into JavaScript's native 64-bit double\nvar num = view.getFloat32(0);\n// Done\nmsg.topic = \"V-RMS Z\";\nmsg.payload = Number(num.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 960,
+        "wires": [
+            [
+                "109c15e568366d85",
+                "bd8ebf4ede6dd6cb"
+            ]
+        ]
+    },
+    {
+        "id": "109c15e568366d85",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8e989199e53b9a28",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "VRMS Y Convert to REAL",
+        "func": "// Create a buffer\nvar buf = new ArrayBuffer(4);//0,1,2,3\n\n// Create a data view of it\nvar view = new DataView(buf);\n\n// Write the ints to it\nview.setInt8(0, msg.payload[8]);\nview.setInt8(1, msg.payload[9]);\nview.setInt8(2, msg.payload[10]);\nview.setInt8(3, msg.payload[11]);\n\n// Read the bits as a float; note that by doing this, we're implicitly\n// converting it from a 32-bit float into JavaScript's native 64-bit double\nvar num = view.getFloat32(0);\n// Done\nmsg.topic = \"V-RMS Y\";\nmsg.payload = Number(num.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1020,
+        "wires": [
+            [
+                "de8cf54a3ede6423",
+                "bd8ebf4ede6dd6cb"
+            ]
+        ]
+    },
+    {
+        "id": "de8cf54a3ede6423",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "234f054e7dfe8a36",
+        "type": "function",
+        "z": "661a2f634915524d",
+        "name": "VRMS X Convert to REAL",
+        "func": "// Create a buffer\nvar buf = new ArrayBuffer(4);//0,1,2,3\n\n// Create a data view of it\nvar view = new DataView(buf);\n\n// Write the ints to it\nview.setInt8(0, msg.payload[12]);\nview.setInt8(1, msg.payload[13]);\nview.setInt8(2, msg.payload[14]);\nview.setInt8(3, msg.payload[15]);\n\n// Read the bits as a float; note that by doing this, we're implicitly\n// converting it from a 32-bit float into JavaScript's native 64-bit double\nvar num = view.getFloat32(0);\n// Done\nmsg.topic = \"V-RMS X\";\nmsg.payload = Number(num.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1080,
+        "wires": [
+            [
+                "c7ad63844c149ccc",
+                "bd8ebf4ede6dd6cb"
+            ]
+        ]
+    },
+    {
+        "id": "c7ad63844c149ccc",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "bd8ebf4ede6dd6cb",
+        "type": "ui_chart",
+        "z": "661a2f634915524d",
+        "name": "",
+        "group": "d33f5be9621178a8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "V-RMS",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1060,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c751ac6367aad934",
+        "type": "ui_gauge",
+        "z": "661a2f634915524d",
+        "name": "",
+        "group": "d33f5be9621178a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature (in °C)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#9fdefe",
+            "#dab52f",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "",
+        "className": "",
+        "x": 1010,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "947a1b0bf6127001",
+        "type": "ui_button",
+        "z": "661a2f634915524d",
+        "name": "",
+        "group": "d33f5be9621178a8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 860,
+        "y": 1120,
+        "wires": [
+            [
+                "bd8ebf4ede6dd6cb"
+            ]
+        ]
+    },
+    {
+        "id": "8bdb998186537267",
+        "type": "delay",
+        "z": "661a2f634915524d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 680,
+        "wires": [
+            [
+                "210853b8eb197f02"
+            ]
+        ]
+    }
+]
