@@ -11,7 +11,7 @@
         "id": "0816abbb5f70e09c",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "192.168.0.104",
+        "broker": "localhost",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -184,12 +184,15 @@
         "key": "",
         "certname": "",
         "keyname": "",
+        "persistence_bind": "memory",
         "dburl": "",
         "usetls": false,
         "x": 150,
-        "y": 60,
+        "y": 120,
         "wires": [
-            [],
+            [
+                "bcd74dfbc759d4a7"
+            ],
             []
         ]
     },
@@ -198,7 +201,7 @@
         "type": "mqtt in",
         "z": "661a2f634915524d",
         "name": "",
-        "topic": "sig350/iolink/v1/gateway/identification",
+        "topic": "sig350/iolink/v1/devices/master1port1/processdata/value",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "0816abbb5f70e09c",
@@ -206,8 +209,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 210,
-        "y": 120,
+        "x": 270,
+        "y": 180,
         "wires": [
             [
                 "b1e8bc5c9bf3392b"
@@ -226,8 +229,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 120,
+        "x": 640,
+        "y": 180,
         "wires": []
     },
     {
@@ -247,7 +250,7 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 560,
+        "x": 540,
         "y": 840,
         "wires": [
             [
@@ -458,7 +461,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 880,
+        "y": 900,
         "wires": []
     },
     {
@@ -906,5 +909,31 @@
                 "210853b8eb197f02"
             ]
         ]
+    },
+    {
+        "id": "bcd74dfbc759d4a7",
+        "type": "debug",
+        "z": "661a2f634915524d",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "45b799e7702b9786",
+        "type": "comment",
+        "z": "661a2f634915524d",
+        "name": "MQTT Broker (Local)",
+        "info": "",
+        "x": 160,
+        "y": 60,
+        "wires": []
     }
 ]
